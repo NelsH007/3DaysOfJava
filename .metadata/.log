@@ -1964,3 +1964,6 @@ Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/NelsH0
 
 !ENTRY org.eclipse.egit.ui 4 0 2020-10-14 16:18:01.641
 !MESSAGE Can't connect to any repository: https://github.com/NelsH007/3DaysOfJava (https://github.com/NelsH007/3DaysOfJava: not authorized)
+
+!ENTRY org.eclipse.equinox.security 1 0 2020-10-14 17:13:50.929
+!MESSAGE New keyring password generated. 

@@ -1,15 +1,24 @@
-
+import java.util.Scanner;
 public class MySweetProgram {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        System.out.println(" Eclipse shut up");
-        int i = 0; //Initialization
-        do {
-            System.out.println(" take those " + i + " punches Bascuñan");
-            i++;
-        } while (i < 100); //Useful when u need to do it at least once
-        }
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Give us a size");
+		int size = in.nextInt();
+		int[] grades = new int[size];
+		
+		System.out.println("Enter "+ size+ "numbers. Press enter after each.");
+		for( int i=0; i<size; i++) {
+			grades[i]= in.nextInt();			
+		}	
+		
+		in.close();	
+		
+		for(int i=0; i<size; i++) {
+		System.out.println(grades[i]);
+		}
+
+	}
 	
 }
 
