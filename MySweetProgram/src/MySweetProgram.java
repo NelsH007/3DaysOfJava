@@ -1,24 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-public class MySweetProgram {
-	public static void main(String[] args) {
-		
-		Scanner in = new Scanner(System.in);
-		System.out.println("Give us a size");
-		int size = in.nextInt();
-		int[] grades = new int[size];
-		
-		System.out.println("Enter "+ size+ "numbers. Press enter after each.");
-		for( int i=0; i<size; i++) {
-			grades[i]= in.nextInt();			
-		}	
-		
-		in.close();	
-		
-		for(int i=0; i<size; i++) {
-		System.out.println(grades[i]);
-		}
+import java.io.File;
+import java.io.FileNotFoundException;
 
+public class MySweetProgram {
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		Scanner in = new Scanner(new File("src/students.txt"));
+		
+		List<String> students = new ArrayList<String>();
+		
+		while(in.hasNextLine()) {
+			students.add(in.nextLine());
+		}
+		for(int i=0; i<students.size();i++) {
+			System.out.println("name "+students.get(i));
+		}
+		in.close();
 	}
-	
 }
 
